@@ -21,11 +21,11 @@ class Config
 		//Why bother? because now using only Config::instance()->get()
 		//inside any project will read its own config file
 		if(strpos($info['file'], PICCOLOAPP) !== false)
-			$path = PICCOLOAPP.'/'.strtolower(PICCOLOAPP)."_config.ini";
+			$path = PICCOLOAPP.'/'."piccolophp_config.ini";
 		else
 		{
 			$project = preg_replace('/_.*/','',end(explode('/',$info['file'])));
-			$path = "{$project}/{$project}_config.ini";
+			$path = "{$project}_config.ini";
 		}
 
 		if(file_exists($path))

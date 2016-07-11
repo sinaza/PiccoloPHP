@@ -22,15 +22,14 @@ final class Template
 		$project = $explode[1];
 		$file    = $explode[2];
 
-		$path	 = $project . 
-				   DIRECTORY_SEPARATOR .
+		$path	 =
 				   Config::instance()->get('default', 'view_dir') .
 				   DIRECTORY_SEPARATOR . 
 				   $file; 
 
 		$assets = $this->getAssets($project);
 
-		$view =  ROOTPATH . $path . '.php';
+		$view =  $path . '.php';
 
 		include "layouts/{$layout}.php";
 	}
