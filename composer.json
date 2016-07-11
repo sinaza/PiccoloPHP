@@ -1,0 +1,10 @@
+{
+    "name": "sinaza/PiccoloPHP",
+    "autoload": {
+        "psr-0" : {
+            "Sinaza\\PiccoloPHP" : "src"
+        }
+    }
+}
+
+
