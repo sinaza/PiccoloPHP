@@ -56,8 +56,7 @@ final class Template
 	{
 		$result = array();	
 
-		$dir = $project . 
-			   DIRECTORY_SEPARATOR . 
+		$dir = 
 			   Config::instance()->get('statics', 'name') . 
 			   DIRECTORY_SEPARATOR . 
 			   Config::instance()->get('statics', $switch);
