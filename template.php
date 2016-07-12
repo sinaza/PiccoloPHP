@@ -22,10 +22,9 @@ final class Template
 		$project = $explode[1];
 		$file    = $explode[2];
 
-		$path	 =
-				   Config::instance()->get('default', 'view_dir') .
-				   DIRECTORY_SEPARATOR . 
-				   $file; 
+		$path	 = Config::instance()->get('default', 'view_dir') .
+			   DIRECTORY_SEPARATOR . 
+			   $file; 
 
 		$assets = $this->getAssets($project);
 
@@ -37,8 +36,8 @@ final class Template
 	protected function getAssets($project)
 	{
 		$server = Config::instance()->get('server', 'address') . 
-				  str_replace($_SERVER['HOME'], '', ROOTPATH) . 
-				  $project . DIRECTORY_SEPARATOR;
+			  str_replace($_SERVER['HOME'], '', ROOTPATH) . 
+			  $project . DIRECTORY_SEPARATOR;
 
 		$scripts = $this->getStatics($project, 'js');
 		$styles  = $this->getStatics($project, 'css');
@@ -56,10 +55,9 @@ final class Template
 	{
 		$result = array();	
 
-		$dir = 
-			   Config::instance()->get('statics', 'name') . 
-			   DIRECTORY_SEPARATOR . 
-			   Config::instance()->get('statics', $switch);
+		$dir =  Config::instance()->get('statics', 'name') . 
+			DIRECTORY_SEPARATOR . 
+			Config::instance()->get('statics', $switch);
 
 		$files = array_diff(scandir(ROOTPATH.$dir), array('.', '..'));
 
