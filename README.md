@@ -1,6 +1,6 @@
 # PiccoloPHP
 
-Playing around with framework architecture
+Playing around with framework architecture.
 
 ## How To Use
 
